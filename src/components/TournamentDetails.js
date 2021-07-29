@@ -17,7 +17,11 @@ const TournamentDetails = () => {
     .then((res) => console.log(res.data.data))
     .catch((error) => console.log(error));
 
-  return <></>;
+  return (
+    <div>
+      <div>MAP List here</div>
+    </div>
+  );
 };
 
 export default TournamentDetails;

@@ -5,6 +5,7 @@ import Tournament from "./routes/Tournament";
 function App() {
   return (
     <div className="App">
+      <Home />
       <Router>
         <Switch>
           <Route exact path="/">
