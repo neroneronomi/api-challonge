@@ -8,8 +8,6 @@ const Home = () => {
     <div>
       <h1>Challonge API</h1>
       <Dashboard />
-      <TournamentDetails />
-      <MatchDetails />
     </div>
   );
 };

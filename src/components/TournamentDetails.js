@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const TournamentDetails = () => {
+const TournamentDetails = (props) => {
   console.log("TournaDetails Test");
   axios({
     url: "https://api.challonge.com/v2/tournaments.json",
@@ -19,7 +19,29 @@ const TournamentDetails = () => {
 
   return (
     <div>
-      <div>MAP List here</div>
+      <div>
+        {props.loadingState && <div>Loading...</div>}
+        {!props.loadingState && (
+          <div>
+            {props.tournaments.data.data.map((tournament) => {
+              return (
+                <ul>
+                  <li key={tournament.id}>
+                    <p> Tournament Name: {tournament.attributes.name} </p>
+                    <p>
+                      {" "}
+                      Tournament Type: {
+                        tournament.attributes.tournamentType
+                      }{" "}
+                    </p>
+                    <p> URL: {tournament.attributes.url} </p>
+                  </li>
+                </ul>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
