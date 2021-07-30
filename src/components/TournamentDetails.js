@@ -20,8 +20,8 @@ const TournamentDetails = (props) => {
   return (
     <div>
       <div>
-        {props.loadingState && <div>Loading...</div>}
-        {!props.loadingState && (
+        {props.isLoading && <div>Loading...</div>}
+        {!props.isLoading && (
           <div>
             {props.tournaments.data.data.map((tournament) => {
               return (
