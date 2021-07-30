@@ -1,0 +1,12 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-image: url("./assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  opacity: 0.7;
+}

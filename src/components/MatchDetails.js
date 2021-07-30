@@ -4,9 +4,9 @@ import axios from "axios";
 const MatchDetails = () => {
   console.log("MATCH DETAILS");
   axios({
-    url: "https://api.challonge.com/v1/tournaments/https://challonge.com/mumble_nero/matches/{match_id}/attachments.{json|xml}",
+    url: "https://api.challonge.com/v2/tournaments/mumble_nero/matches/1/attachments.json",
     method: "GET",
-    data: "",
+    data: null,
     headers: {
       "Content-Type": "application/vnd.api+json",
       Accept: "application/json",
@@ -18,7 +18,11 @@ const MatchDetails = () => {
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
 
-  return <div>Match Details</div>;
+  return (
+    <div>
+      <h1>Match Details</h1>
+    </div>
+  );
 };
 
 export default MatchDetails;
