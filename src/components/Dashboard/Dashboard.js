@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./Dashboard.css";
 // import API_Res from "../../api/API_Res";
 import Instance from "../../api/Instance";
 import TournamentDetails from "../TournamentDetails";
 import MatchDetails from "../MatchDetails";
-import CreateTournament from "../CreateTournament";
 
 const Dashboard = () => {
   const [tournaments, setTournaments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [update, setUpdate] = useState(0);
+  const history = useHistory();
 
   const showDetails = () => {
     setUpdate(update + 1);
@@ -34,10 +35,16 @@ const Dashboard = () => {
     setShowListButton(false);
   };
 
+  const handleClick = (e) => {
+    e.preventDefault()
+    history.push("/tournament")
+  }
+
   return (
     <div className="dashboard">
       <h1>TOURNAMET DETAILS</h1>
       <div className="buttons">
+        <button onClick={handleClick}>CREATE</button>
         <button onClick={showDetails}>GET</button>
         <div className="tournament__details">
           {!showListButton && (

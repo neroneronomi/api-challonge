@@ -1,9 +1,10 @@
 import React from "react";
+import CreateTournament from "../components/CreateTournament";
 
 const Tournament = () => {
   return (
     <div>
-      <h1>Hello Tournament Page</h1>
+      <CreateTournament />
     </div>
   );
 };

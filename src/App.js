@@ -5,10 +5,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Home />
       <Router>
         <Switch>
-          <Route exact path="/"></Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route exact path="/tournament">
             <Tournament />
           </Route>
