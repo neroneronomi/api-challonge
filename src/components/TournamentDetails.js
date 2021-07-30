@@ -27,14 +27,19 @@ const TournamentDetails = (props) => {
               return (
                 <ul>
                   <li key={tournament.id}>
-                    <p> Tournament Name: {tournament.attributes.name} </p>
                     <p>
                       {" "}
-                      Tournament Type: {
-                        tournament.attributes.tournamentType
-                      }{" "}
+                      <h2>Event Name:</h2> {tournament.attributes.name}{" "}
                     </p>
-                    <p> URL: {tournament.attributes.url} </p>
+                    <p>
+                      {" "}
+                      <h2>Tournament Type:</h2>{" "}
+                      {tournament.attributes.tournamentType}{" "}
+                    </p>
+                    <p>
+                      {" "}
+                      <h2>URL:</h2> {tournament.attributes.url}{" "}
+                    </p>
                   </li>
                 </ul>
               );
