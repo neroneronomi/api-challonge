@@ -27,8 +27,8 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
+      <h1>TOURNAMET DETAILS</h1>
       <div className="buttons">
-        <h1>TOURNAMET DETAILS</h1>
         <button onClick={showDetails}>GET</button>
         <button onClick={showDetails}>SHOW</button>
       </div>

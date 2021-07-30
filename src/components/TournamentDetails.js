@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "./Dashboard/Dashboard";
 const TournamentDetails = (props) => {
   console.log("Tournament Details Test");
   axios({
@@ -25,23 +25,25 @@ const TournamentDetails = (props) => {
           <div>
             {props.tournaments.data.data.map((tournament) => {
               return (
-                <ul>
-                  <li key={tournament.id}>
-                    <p>
-                      {" "}
-                      <h2>Event Name:</h2> {tournament.attributes.name}{" "}
-                    </p>
-                    <p>
-                      {" "}
-                      <h2>Tournament Type:</h2>{" "}
-                      {tournament.attributes.tournamentType}{" "}
-                    </p>
-                    <p>
-                      {" "}
-                      <h2>URL:</h2> {tournament.attributes.url}{" "}
-                    </p>
-                  </li>
-                </ul>
+                <div className="tournament__list">
+                  <ul>
+                    <li key={tournament.id}>
+                      <p>
+                        {" "}
+                        <h2>Event Name:</h2> {tournament.attributes.name}{" "}
+                      </p>
+                      <p>
+                        {" "}
+                        <h2>Tournament Type:</h2>{" "}
+                        {tournament.attributes.tournamentType}{" "}
+                      </p>
+                      <p>
+                        {" "}
+                        <h2>URL:</h2> {tournament.attributes.url}{" "}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               );
             })}
           </div>
