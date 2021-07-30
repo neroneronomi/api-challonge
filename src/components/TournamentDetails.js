@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 const TournamentDetails = (props) => {
-  console.log("TournaDetails Test");
+  console.log("Tournament Details Test");
   axios({
     url: "https://api.challonge.com/v2/tournaments.json",
     method: "GET",

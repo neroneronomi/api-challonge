@@ -1,6 +1,4 @@
 import React from "react";
-import TournamentDetails from "../components/TournamentDetails";
-import MatchDetails from "../components/MatchDetails";
 import Dashboard from "../components/Dashboard/Dashboard";
 
 const Home = () => {
