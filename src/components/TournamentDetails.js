@@ -44,6 +44,9 @@ const TournamentDetails = (props) => {
                       </p>
                     </li>
                   </ul>
+                  <button type="button" onClick={props.onCancel}>
+                    Cancel
+                  </button>
                 </div>
               );
             })}

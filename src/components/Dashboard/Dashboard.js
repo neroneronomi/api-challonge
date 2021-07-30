@@ -25,19 +25,33 @@ const Dashboard = () => {
       });
   }, [update]);
 
+  const [showListButton, setShowListButton] = useState(false);
+
+  const showTournamentList = () => {
+    setShowListButton(true);
+  };
+  const hideList = () => {
+    setShowListButton(false);
+  };
+
   return (
     <div className="dashboard">
       <h1>TOURNAMET DETAILS</h1>
       <div className="buttons">
         <button onClick={showDetails}>GET</button>
-        <button onClick={showDetails}>SHOW</button>
-      </div>
-      <div className="tournament__details">
-        <TournamentDetails
-          tournaments={tournaments}
-          isLoading={isLoading}
-          showDetails={showDetails}
-        />
+        <div className="tournament__details">
+          {!showListButton && (
+            <button onClick={showTournamentList}>SHOW</button>
+          )}
+          {showListButton && (
+            <TournamentDetails
+              tournaments={tournaments}
+              isLoading={isLoading}
+              showDetails={showDetails}
+              onCancel={hideList}
+            />
+          )}
+        </div>
       </div>
       <MatchDetails />
     </div>

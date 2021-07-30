@@ -54,3 +54,15 @@ button {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-y: scroll;
 }
+
+.tournament__details button {
+  margin-top: 10px;
+  width: 80px;
+  height: 20px;
+  background-color: #43b047;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Bangers", cursive;
+  font-size: large;
+}
