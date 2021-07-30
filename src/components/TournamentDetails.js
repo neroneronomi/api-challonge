@@ -39,7 +39,8 @@ const TournamentDetails = (props) => {
                       </p>
                       <p>
                         {" "}
-                        <h2>URL:</h2> {tournament.attributes.url}{" "}
+                        <h2>URL:</h2>{" "}
+                        {`challonge.com/${tournament.attributes.url}`}{" "}
                       </p>
                     </li>
                   </ul>
