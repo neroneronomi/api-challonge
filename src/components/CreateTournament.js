@@ -4,7 +4,7 @@ import Instance from "./Instance";
 import './CreateTournament.css'
 
 
-const CreateTournament = (props) => {
+const CreateTournament = () => {
   const [inputName, setInputName] = useState("");
   const [inputUrl, setInputUrl] = useState("");
   const [inputMode, setInputMode] = useState("single elimination");
@@ -39,6 +39,7 @@ const CreateTournament = (props) => {
   return (
     <div className="form-container">
       <form>
+        <h1>CREATE TOURNAMENT</h1>
         <div className="form-field">
           <label>Name</label>
           <input

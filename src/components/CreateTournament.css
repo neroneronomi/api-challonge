@@ -10,6 +10,14 @@
   justify-content: center;
 }
 
+form h1 {
+  text-decoration: none;
+  font-family: "Bangers", cursive;
+  font-size: 200%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
 form {
   margin-top: 100px;
   font-family: "Bangers", cursive;
